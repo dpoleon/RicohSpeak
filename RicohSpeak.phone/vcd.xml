@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<VoiceCommands xmlns="http://schemas.microsoft.com/voicecommands/1.1">
+
+  <CommandSet xml:lang="en-gb" Name="examplevcd">
+    <CommandPrefix>Ricoh</CommandPrefix>
+    <Example>Command the printer!</Example>
+
+    <Command Name="command">
+      <Example>print</Example>
+      <ListenFor>{command}</ListenFor>
+      <Feedback>Commanding...</Feedback>
+      <Navigate/>
+    </Command>
+
+    <PhraseList Label="command">
+      <Item>print</Item>
+      <Item>scan</Item>
+      <Item>copy</Item>
+    </PhraseList>
+    
+  </CommandSet>
+
+</VoiceCommands>
