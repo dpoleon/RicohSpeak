@@ -1,15 +1,19 @@
-﻿var app = require('express')();
+﻿var http = require('http');
+var app = require('express')();
 
 var targetSocket;
 
-//setup the http route (for receiving commands)
+app.set('port', process.env.PORT);
 app.get('/api/command', function (req, res) {
-    //if there's a target, send the command via a socket message
     if (targetSocket) targetSocket.emit('command', req.query.cmd);
 });
 
-//setup the sockets (for setting target)
-var io = require('socket.io')(app);
+module.exports = app;
+
+var server = http.createServer(app).listen(app.get('port'));
+
+var io = require('socket.io')(server);
+
 io.on('connection', function (socket) {
     console.log('connection from client ' + socket.id);
     socket.on('setTarget', function () {
@@ -17,6 +21,3 @@ io.on('connection', function (socket) {
         targetSocket = socket
     });
 });
-
-app.listen(process.env.PORT);
-module.exports = app;
