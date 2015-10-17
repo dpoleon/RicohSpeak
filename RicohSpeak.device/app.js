@@ -2,7 +2,8 @@
 var socket = require('socket.io-client')
     .connect('http://RicohSpeak.azurewebsites.net');
 
-//work on a real device
+    //work on a real device
+/*
 cylon.robot({
     name: 'edison',
     connections: { edison: { adaptor: 'intel-iot' } },
@@ -15,3 +16,4 @@ cylon.robot({
         })
     }
 }).start();
+*/
