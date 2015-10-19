@@ -16,7 +16,7 @@
                     //.then(
                     //    function () { debugger; },
                     //    function (err) { debugger; }
-                    //);
+                //);
             });
 
         if (args.detail.kind === activation.ActivationKind.launch) {
@@ -31,6 +31,7 @@
         }
 
         else if (args.detail.kind === activation.ActivationKind.voiceCommand) {
+            var _result = args.detail.result
             var command = args.detail.result.semanticInterpretation.properties.command[0];
             WinJS.xhr({ url: 'http://RicohSpeak.azurewebsites.net/api/command?cmd=' + command });
         }

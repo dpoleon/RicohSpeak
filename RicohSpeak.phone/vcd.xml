@@ -7,17 +7,21 @@
     <Example>Command the printer!</Example>
 
     <Command Name="command">
-      <Example>print</Example>
+      <Example>Print Hello World!</Example>
       <ListenFor>{command}</ListenFor>
-      <Feedback>Commanding...</Feedback>
+      <Feedback>Commanding Ricoh to {command}...</Feedback>
       <Navigate/>
     </Command>
+    
+    <PhraseTopic Label="command">
+      <Subject>print</Subject>
+    </PhraseTopic>    
 
-    <PhraseList Label="command">
+    <!--<PhraseList Label="command">
       <Item>print</Item>
       <Item>scan</Item>
       <Item>copy</Item>
-    </PhraseList>
+    </PhraseList>-->
     
   </CommandSet>
 
