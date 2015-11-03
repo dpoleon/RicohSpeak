@@ -4,24 +4,23 @@
 
   <CommandSet xml:lang="en-gb" Name="examplevcd">
     <CommandPrefix>Ricoh</CommandPrefix>
-    <Example>Command the printer!</Example>
+    <Example>Command the dashboard!</Example>
 
     <Command Name="command">
-      <Example>Print Hello World!</Example>
+      <Example>Load!</Example>
       <ListenFor>{command}</ListenFor>
-      <Feedback>Commanding Ricoh to {command}...</Feedback>
+      <Feedback>Commanding Ricoh to {command} dashboard...</Feedback>
       <Navigate/>
     </Command>
-    
-    <PhraseTopic Label="command">
-      <Subject>print</Subject>
-    </PhraseTopic>    
 
-    <!--<PhraseList Label="command">
-      <Item>print</Item>
-      <Item>scan</Item>
-      <Item>copy</Item>
-    </PhraseList>-->
+    <!-- <PhraseTopic Label="command">
+      <Subject>print</Subject>
+    </PhraseTopic> -->    
+
+    <PhraseList Label="command">
+      <Item>load</Item>
+      <Item>clear</Item>
+    </PhraseList>
     
   </CommandSet>
 
